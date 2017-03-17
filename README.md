@@ -2,7 +2,7 @@
 #### __*By: Derek Villars*__
 
 ### _Specifications:_
-1. takes a input and outputs a doctors name
+1. takes a input and outputs the first ten doctors name
   + __input1:__ toothache
   + __output:__ steven-toschi, james-pueschel-dds, karen-knight-3, don-nguyen-4, behnaz-cheikh, jill-mahoney, thomas-fankhauser, brian-davila, william-chambers-5, vladimir-shuster,
 
