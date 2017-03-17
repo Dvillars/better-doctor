@@ -1,17 +1,15 @@
 var apiKey = require('./../.env').apiKey;
 
-function Calculator() {};
+function Calculator() {}
 
-Calculator.prototype.getDoctors = function(newInput) {
-  var result = ""
-  $.get('https://api.betterdoctor.com/2016-03-01/doctors?query=' + newInput + '&user_key=' + apiKey)
+Calculator.prototype.getDoctors = function(newInput, displayDoctors) {
+  $.get('https://api.betterdoctor.com/2016-03-01/doctors?query=' + newInput + '&limit=10&user_key=' + apiKey)
     .then(function(response) {
-      result = response.doctor.profile.slug;
+      return displayDoctors(response);
     })
     .fail(function(error) {
-      result = error.responseJSON.message;
+      console.log(error.responseJSON.message);
     });
-  return result;
 };
 
 exports.calculatorModule = Calculator;

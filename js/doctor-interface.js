@@ -1,14 +1,24 @@
 var Calculator = require('./../js/doctor.js').calculatorModule;
 
+var displayDoctors = function(response) {
+  var newOutput = "";
+  for (var i = 0; i < response.data.length; i++) {
+    var currentOutput = response.data[i].profile.slug;
+    newOutput += currentOutput + ", ";
+  }
+  console.log(newOutput);
+  return newOutput;
+}
+
 $(document).ready(function() {
   var simpleCalculator = new Calculator();
   $('#doctor-form').submit(function(event) {
     event.preventDefault();
     var newInput = $('#sickness').val().toLowerCase();
-    var response = simpleCalculator.getDoctors(newInput);
+    // var newOutput = simpleCalculator.getDoctors(newInput);
 
-    $('.input').text(newInput)
-    $('.result').text(response);
+    $(".input").text(newInput);
+    $(".result").text(simpleCalculator.getDoctors(newInput, displayDoctors));
   });
 });
 
