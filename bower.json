@@ -1,0 +1,21 @@
+{
+  "name": "better-doctors",
+  "description": "a app that uses BetterDoctor api",
+  "main": "index.js",
+  "authors": [
+    "Derek Villars"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.0",
+    "bootstrap": "^3.3.7"
+  }
+}
