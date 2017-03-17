@@ -1,11 +1,13 @@
 var apiKey = require('./../.env').apiKey;
 
-function Calculator() {}
+function Calculator() {
+  this.doctors = '';
+}
 
 Calculator.prototype.getDoctors = function(newInput, displayDoctors) {
   $.get('https://api.betterdoctor.com/2016-03-01/doctors?query=' + newInput + '&limit=10&user_key=' + apiKey)
     .then(function(response) {
-      return displayDoctors(response);
+      displayDoctors(response);
     })
     .fail(function(error) {
       console.log(error.responseJSON.message);

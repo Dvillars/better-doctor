@@ -7,7 +7,7 @@ var displayDoctors = function(response) {
     newOutput += currentOutput + ", ";
   }
   console.log(newOutput);
-  return newOutput;
+  this.doctors = newOutput;
 }
 
 $(document).ready(function() {
@@ -18,7 +18,7 @@ $(document).ready(function() {
     // var newOutput = simpleCalculator.getDoctors(newInput);
 
     $(".input").text(newInput);
-    $(".result").text(simpleCalculator.getDoctors(newInput, displayDoctors));
+    $(".result").text(simpleCalculator.getDoctors(newInput, displayDoctors).doctors);
   });
 });
 
