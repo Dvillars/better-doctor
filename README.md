@@ -2,10 +2,12 @@
 #### __*By: Derek Villars*__
 
 ### _Specifications:_
-1. takes a input and outputs the first ten doctors.
-  + __input1:__ toothache
-  + __output:__ steven-toschi, james-pueschel-dds, karen-knight-3, don-nguyen-4, behnaz-cheikh, jill-mahoney, thomas-fankhauser, brian-davila, william-chambers-5, vladimir-shuster,
-- use the correct api link
+1. takes a input and outputs the first twenty results.
+  + input: broken bone
+  + output: Your Doctor Results for broken bone is Aprajita A Goel, Priscilla D Le, Brenda Faye Murphy, Jeffrey S. Stevens, Jason Karl Hyde, David Adam Goldwyn, Richard D Adamick, John Tyson Vetto, Patricia Marie Engle, Randy H Greene, Louise McHarris, Richard Koesel, Edward A. Sparling, Kevin G Semonsen, Leslie Ann Arpin, Thomas Janisse, Feiyu Xue, Erik Kwokshek Szeto, Alexandru C Bageac, Eric Smith Orwoll.
+- another example input output pair
+  + input: heart
+  + output: Your Doctor Results for heart is Maureen E Mays, James G Beckerman, Eric J Putz, Kristen Crowley, Robin Day Shaughnessy, Todd A Caufield, Elizabeth A Reindl, Gail A Jacoby Low, Michael Robert Parsons, Jennifer F Kurmaskie, Richard Hoon Sohn, Parvez Jamshed Pohowalla, Ethan Chauncey Korngold, Jay B Shah, Sean Eric Jones, Kiren Jean Kresa-Reahl, Vanessa Esteves, Asish K. Das, Christine Ann Osterholzer McBurney, Jocelyn F Camara.
 
 
 ### _Support and Contact:_
