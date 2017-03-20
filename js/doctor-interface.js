@@ -3,11 +3,19 @@ var Calculator = require('./../js/doctor.js').calculatorModule;
 var displayDoctors = function(response) {
   var newOutput = "";
   for (var i = 0; i < response.data.length; i++) {
-    var currentOutput = response.data[i].profile.slug;
-    newOutput += currentOutput + ", ";
+    if (response.data[i].profile.middle_name === undefined) {
+      var currentOutput = response.data[i].profile.first_name + " " + response.data[i].profile.last_name;
+    } else {
+      var currentOutput = response.data[i].profile.first_name + " " + response.data[i].profile.middle_name + " " + response.data[i].profile.last_name;
+    }
+    if (i === response.data.length-1) {
+      newOutput += currentOutput + ".";
+    } else {
+      newOutput += currentOutput + ", ";
+    }
+
   }
-  console.log(newOutput);
-  this.doctors = newOutput;
+  $(".result").text(newOutput);
 }
 
 $(document).ready(function() {
@@ -15,10 +23,9 @@ $(document).ready(function() {
   $('#doctor-form').submit(function(event) {
     event.preventDefault();
     var newInput = $('#sickness').val().toLowerCase();
-    // var newOutput = simpleCalculator.getDoctors(newInput);
 
     $(".input").text(newInput);
-    $(".result").text(simpleCalculator.getDoctors(newInput, displayDoctors).doctors);
+    simpleCalculator.getDoctors(newInput, displayDoctors);
   });
 });
 

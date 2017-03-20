@@ -1,14 +1,30 @@
-$gray : #aa23fd;
-$green : #2111cd;
+$blue : #4286f4;
+$orange : #f2ae41;
+$grey : #e0e0e0;
 
+body {
+  background-color: grey;
+}
 .box {
-  background: $gray;
-  border: 3px solid black;
+  margin-top: 15px;
+  font-size: 18px;
+  background: $blue;
+  color: $grey;
+  border: 3px solid $grey;
   padding: 40px 80px;
   .button {
     font-weight: bold;
     text-align: center;
-    background: $green;
+    background: $orange;
+    color: $grey;
+  }
+  input {
+    font-weight: bold;
+    background: $orange;
+    color: white;
+  }
+  .input, .result {
+    font-weight: bolder;
     color: white;
   }
 }
